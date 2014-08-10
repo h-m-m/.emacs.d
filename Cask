@@ -18,3 +18,4 @@
 (depends-on "zenburn-theme")
 (depends-on "cucumber.el")
 (depends-on "github-browse-file")
+(source gnu)

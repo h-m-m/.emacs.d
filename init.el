@@ -65,11 +65,8 @@
  (global-set-key (kbd "C-x l") 'goto-line)
 
 ;; -- disable stuff ----------------------------------------------------------
-(setq make-backup-files nil)
-(setq auto-save-default nil)
 (setq inhibit-startup-message t)
 (fset 'yes-or-no-p 'y-or-n-p)
-(menu-bar-mode -1)
 
 ;; -- rows and columns -------------------------------------------------------
 (setq line-number-mode t)
@@ -102,7 +99,7 @@
 ;; == themes =================================================================
 
 ;; It's in Cask now instead /themes. Yay!
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
 
 ;; == projectile setup from http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-environment-on-osx/?utm_source=rubyweekly&utm_medium=email
 
