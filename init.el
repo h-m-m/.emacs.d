@@ -62,7 +62,7 @@
 
 
 ;; -- M-g g is annoying
- (global-set-key (kbd "C-x l") 'goto-line)
+; (global-set-key (kbd "C-x l") 'goto-line)
 
 ;; -- disable stuff ----------------------------------------------------------
 (setq inhibit-startup-message t)
@@ -71,7 +71,7 @@
 ;; -- rows and columns -------------------------------------------------------
 (setq line-number-mode t)
 (setq column-number-mode t)
-(global-linum-mode t)
+;;(global-linum-mode t)
 
 ;; TODO turn off linum in multi-term dammit!
 
