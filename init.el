@@ -1,5 +1,21 @@
 ;; == package mgmt ==========================================================
+(unless window-system
+  (require 'mouse)
+  (xterm-mouse-mode t)
+  (defun track-mouse(e))
+  (setq mouse-sel-mode t)
+  (global-set-key [mouse-4] (lambda ()
+                              (interactive)
+                              (scroll-down 1)))
+  (global-set-key [mouse-5] (lambda ()
+                              (interactive)
+                              (scroll-up 1)))
+  )
 
+(require 'package)
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.org/packages/") t)
+(package-initialize)
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
@@ -159,7 +175,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ruby-deep-arglist (quote f)))
+ '(package-selected-packages (quote (package-build shut-up epl git commander f dash s))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
